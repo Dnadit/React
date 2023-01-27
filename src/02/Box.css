@@ -1,0 +1,53 @@
+h1 {
+    color: white;
+    font-size: 5vh;
+}
+
+.bheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+}
+
+.rowDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 60vw;
+    height: 6vh;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.418);
+}
+
+.col {
+    display: inline-flex;         /* 원래 inline 스타일은 width를 못잡음, inline-flex를 통해 박스로 만들었음.*/
+    justify-content: center;
+    align-items: center;
+}
+
+#colrank {
+    width: 10%;
+}
+
+#colmovieNm {
+    width: 60%;
+}
+
+#colsalesAmt {
+    width: 20%;
+}
+
+#colrankInten {
+    width: 10%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+}
