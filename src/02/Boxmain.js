@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Boxmain = () => {
     const mvlist = [
         {"rnum":"1","rank":"1","rankInten":"0","rankOldAndNew":"OLD","movieCd":"20190808","movieNm":"교섭","openDt":"2023-01-18","salesAmt":"355906586","salesShare":"18.8","salesInten":"-147956429","salesChange":"-29.4","salesAcc":"12600296336","audiCnt":"36622","audiInten":"-23326","audiChange":"-38.9","audiAcc":"1234442","scrnCnt":"945","showCnt":"3700"},
@@ -11,58 +13,46 @@ const Boxmain = () => {
         {"rnum":"9","rank":"9","rankInten":"-1","rankOldAndNew":"OLD","movieCd":"20228313","movieNm":"오늘 밤, 세계에서 이 사랑이 사라진다 해도","openDt":"2022-11-30","salesAmt":"49429844","salesShare":"2.6","salesInten":"-16882910","salesChange":"-25.5","salesAcc":"10112965111","audiCnt":"4868","audiInten":"-2184","audiChange":"-31","audiAcc":"980655","scrnCnt":"241","showCnt":"355"},
         {"rnum":"10","rank":"10","rankInten":"0","rankOldAndNew":"OLD","movieCd":"20229518","movieNm":"천룡팔부: 교봉전","openDt":"2023-01-25","salesAmt":"15848197","salesShare":"0.8","salesInten":"-3804460","salesChange":"-19.4","salesAcc":"48516954","audiCnt":"1754","audiInten":"-482","audiChange":"-21.6","audiAcc":"5202","scrnCnt":"259","showCnt":"393"}
     ] ;
-    console.log(mvlist);
+    let [dspmv, setDspmv] = useState({}) ;
 
-    //divtag 배열로 만들기.
-    let divTags = [] ;
-
-    // 배열의 모든 인덱스를 하나씩 콘솔에 찍어보기. 
-    const klist = ['rank', 'movieNm', 'salesAmt', 'rankInten'] ;
-    for(let item of mvlist) {
-        console.log(item);
-        
-        
-        console.log(divTags);
-        
-        //case5
-        let temp = [] ;
-        temp = klist.map((k) => <span key={item.movieCd + k} className="col" id={`col${k}`}>{item[k]}</span>); // map은 (k)는 klist의 각 요소를 뜻함,  item[k]를 넣은 새로운 배열을 생성.하여 temp에 할당.
-        console.log(temp);
-        divTags.push(<div key={item.movieCd} className="rowDiv">{temp}</div>);
-        
-        /*
-        for(let [k, v] of Object.entries(item)){     // for... of 는 key만 가져옴, key,value 같이 가져오고싶을때 Object.entries(item) 사용.
-            // case1
-            //if (k == 'rank' | k == 'rankInten' | k == 'movieNm' | k == 'salesAmt') 
-            // case2
-            // if (klist.includes(k))
-            // console.log(k, v);
-            
-        }
-        */
-            // case3
-            //for(let k of klist) console.log(k, item[k]);
-            /*
-            // case4
-            console.log(item.rank);
-            console.log(item.rankInten);
-            console.log(item.movieNm);
-            console.log(item.salesAmt);
-            */
+    const handleDivClick = (selmv) => {        
+        setDspmv({...selmv});
     }
-    // for(let item in mvlist) console.log(mvlist[item]); // 위의 for...of와 같은 코드.
-    
-    // 필요한 데이터만 골라내서 출력.
-    
+  
+    let divTags = [] ;
+    // 10번 반복하면서 divTags에 배열형태로 push.
+    for(let mv of mvlist) {
+        // console.log(mv.rank, mv.movieNm, mv.salesAmt, mv.rankInten);
+        // 등락률 표시 바꾸기.
+        let inten = '-' ;
+        if (mv.rankInten > 0) inten = <span className="spup">{'▲' + mv.rankInten} </span>;
+        else if (mv.rankInten < 0) inten = <span className="spdown">{'▼' + -(mv.rankInten)}</span> ;
+        else inten = <span className="spdefault">-</span>
+
+        divTags.push(
+            <div className = "rowDiv" key={mv.movieCd} onClick={() => handleDivClick(mv)}>
+                <span className = "col" id="colrank">{mv.rank}</span>
+                <span className = "col" id="colmovieNm">{mv.movieNm}</span>
+                <span className = "col" id="colsalesAmt">{parseInt(mv.salesAmt).toLocaleString('ko-KR')}</span>
+                <span className = "col" id="colrankInten">{
+                inten
+                }</span>
+            </div>
+        ) ;     
+    }
+
     return(
         <div className = "content">
-            <div className = "rowDiv">
+            <div className = "rowDiv0">
                 <span className = "col" id="colrank">순위</span>
                 <span className = "col" id="colmovieNm">영화명</span>
                 <span className = "col" id="colsalesAmt">매출액</span>
                 <span className = "col" id="colrankInten">증감율</span>
             </div>
             {divTags}
+            <div className="rowDay">
+                [{dspmv.movieNm}] 개봉일 : {dspmv.openDt}
+            </div>
         </div>
     );
 };

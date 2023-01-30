@@ -2,9 +2,7 @@ import Box from './02/Box' ;
 
 const App = () => {
   return (
-    <div>
-      <Box />      
-    </div> 
+      <Box />
   );
 }
 

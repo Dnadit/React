@@ -12,7 +12,7 @@ h1 {
     background-color: black;
 }
 
-.rowDiv {
+.rowDiv, .rowDiv0 {
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -20,7 +20,19 @@ h1 {
     height: 6vh;
     border-bottom: 1px solid rgba(128, 128, 128, 0.418);
 }
-
+.rowDiv:hover, .rowDiv:active {
+    background-color: beige;    
+}
+.rowDay {
+    width: 60vw;
+    height: 6vh;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
 .col {
     display: inline-flex;         /* 원래 inline 스타일은 width를 못잡음, inline-flex를 통해 박스로 만들었음.*/
     justify-content: center;
@@ -50,4 +62,14 @@ h1 {
     align-items: center;
     width: 100vw;
     height: 90vh;
+}
+.spup {
+    color: red;
+}
+.spdown {
+    color: blue;
+}
+.spdefault {
+    color: green;
+    font-size: x-large;
 }
