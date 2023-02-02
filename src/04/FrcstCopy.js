@@ -1,7 +1,7 @@
 import './Frcst.css' ;
 import { useState } from 'react';
 
-const Frcst = () => {
+const FrcstCopy = () => {
     /* 공공데이터포털 : 한국환경공단_에어코리아_대기오염정보
     frcstOneCn : 첫째날예보
     frcstTwoCn : 둘째날예보
@@ -80,4 +80,4 @@ const Frcst = () => {
     ) ;
 }
 
-export default Frcst ;
+export default FrcstCopy ;

@@ -48,20 +48,20 @@ const Frcst = () => {
         frcobj[k] = frccn[idx]; // Object는 {k : "frccn[idx]"}
     }
     //console.log(frcobj);
-    let [cn, setCn] = useState(frcobj["2023-02-02"]);
+    let [cn, setCn] = useState(frccn[0]);
     let [dt, setDt] = useState();
-    
+    // dt가 바뀌면 cn을 바꿔라.
     useEffect(() => {
-        console.log(dt);
-        frcobj[dt] && setCn(frcobj[dt]);
+        //console.log(dt);
+        frcobj[dt] && setCn(frcobj[dt]); // (falsy연산)frcobj[dt] 가 있을때 setCn(frcobj[dt]) 실행. << undefined 체크
     }, [dt]);
     
     return (
          <>
             <Frcheader />            
             <div className='main'>
-                <Frcdt dt={frcdt} setDt={setDt}/>
-                <Fcrcn cn={cn} />
+                <Frcdt dt={frcdt} setDt={setDt}/> 
+                {dt && (<Fcrcn cn={cn} dt={dt} />)}
             </div>            
          </>
     ) ;
