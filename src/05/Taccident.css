@@ -1,0 +1,41 @@
+.thead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: blue;
+    color: white;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 100vw;
+    height: 90vh;
+    margin-top: 2vh;    
+}
+.c1, .c2, .data { 
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: top;
+}
+.c1, .c2 {
+    width: 20vw;
+}
+.data {
+    width: 60vw;
+}
+.c1detail, .c2detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 70%;
+    height: 5vh;
+    margin: 10px;
+}
