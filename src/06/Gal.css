@@ -1,0 +1,49 @@
+.content {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 40vw; 
+    margin: 3%;    
+}
+.detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+    width: 40vw; 
+    margin: 3%;    
+}
+.listDetail, .cliked {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    width: 80%;
+    height: 5vh;
+    margin-top: 20px;
+}
+.listDetail:hover, .listDetail:active, .cliked {
+    background-color: lightgrey;
+    color: red;
+} 
+.img {
+    width: 100%;
+    height: 50vh;
+}
+.galTitle, .galPhotographyLocation, .galPhotographer, .galPhotographyMonth, .galSearchKeyword {    
+    margin: 0px;
+    margin-top: 5px;
+}
+.galTitle {
+    color: grey;
+    margin-top: 20px;
+}
+.galSearchKeyword {
+    color: grey;
+}

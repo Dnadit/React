@@ -9,11 +9,12 @@
 }
 .main {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: top;
     width: 100vw;
     height: 90vh;
-    margin-top: 2vh;    
+    margin-top: 2vh;
+    margin-left: 2vw;   
 }
 .c1, .c2, .data { 
     height: 70vh;
@@ -28,7 +29,12 @@
 .data {
     width: 60vw;
 }
-.c1detail, .c2detail {
+.detail {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.tcard, .tcardSel {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,4 +44,38 @@
     width: 70%;
     height: 5vh;
     margin: 10px;
+}
+.tcard:hover, .tcard:active, .tcardSel {
+    background-color: gray;
+    color: white;
+}
+ul {
+    list-style: none;
+}
+.sp1, .sp11 {
+    display: inline-flex;
+    width: 15vw;
+    height: 40px;
+    justify-content: center;
+    align-items: center;    
+    color: white;
+    margin: 4px;
+    border: 1px solid grey;
+}
+.sp1 {
+    background-color: blue;
+}
+.sp11 {
+    background-color: red;
+}
+.sp2, .sp21 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 40px;
+    border-bottom: 1px solid grey;
+}
+.sp21 {
+    color: red;
 }

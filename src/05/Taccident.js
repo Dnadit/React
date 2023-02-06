@@ -152,7 +152,7 @@ const Taccident = () => {
   //data data
   data = apiData.data;    
   //대분류 c1
-  //console.log("apiData.data", apiData.data)
+  console.log("apiData.data", apiData.data)
   c1 = data.map((item)=> item.사고유형_대분류);
   c1 = new Set(c1);
   c1 = [...c1]; //c1 = Array.from(c1);
@@ -172,11 +172,11 @@ const Taccident = () => {
   
   //숙제 {"차대사람" : ['횡단중', '차도통행중', '길가장자리구역통행중', '보도통행중']}
   let obj = {} ;
-  let c21 = data.map((item) => item.사고유형_중분류);
+  let c21 = data.map((item) => item.사고유형_중분류);  
   for (let [k, v] of c21.entries()) {
-    obj[v] = c1[k];
+    obj[v] = (data.map((item) => item.사고유형_대분류))[k];
   }
-  console.log(obj);
+  //console.log("obj", obj);
 
   return (
       <>
