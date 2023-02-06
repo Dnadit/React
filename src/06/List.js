@@ -3,14 +3,18 @@ const List = ({ list, setSelList, selList }) => {
         setSelList(v);
     }
 
-    const listDeatil = list.map((v) => <div className={
-        selList === v
-            ? 'cliked'
-            : 'listDetail'
-    } key={v} onClick={() => showDetail(v)}>
-        {v}
-    </div>);
-    
+    const listDeatil = list.map((v) =>
+        <div
+            className={
+                selList === v
+                    ? 'cliked'
+                    : 'listDetail'
+            }
+            key={v}
+            onClick={() => showDetail(v)}>
+            {v}
+        </div>);
+
     return (
         <>
             <div className='list'>

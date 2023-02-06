@@ -135,8 +135,7 @@ const Gal = () => {
   const galData = data.response.body.items.item
   console.log("galData", galData)
   const list = galData.map((item)=> item.galTitle)
-  console.log("list", list)
-  //Detail
+  console.log("list", list)  
   
   //state list 선택
   let [selList, setSelList] = useState();
