@@ -6,6 +6,9 @@ const Detail = ({ selDetail }) => {
             :
             k.includes("Title")
                 ? <h1 className={k} key={k}>{selDetail[k]}</h1>
+                : 
+                k.includes("Month")
+                ? <h3 className={k} key={k}>{selDetail[k].substr(0, 4)}.{selDetail[k].substr(4, 6)}</h3>
                 : <h3 className={k} key={k}>{selDetail[k]}</h3>
     );
 

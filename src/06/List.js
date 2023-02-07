@@ -1,10 +1,10 @@
 const List = ({ list, setSelList, selList }) => {
     const showDetail = (v) => {
         setSelList(v);
-    }
+    }    
 
-    const listDeatil = list.map((v) =>
-        <div
+    const listDetail = list.map((v) =>
+        <li
             className={
                 selList === v
                     ? 'cliked'
@@ -13,13 +13,13 @@ const List = ({ list, setSelList, selList }) => {
             key={v}
             onClick={() => showDetail(v)}>
             {v}
-        </div>);
+        </li>);
 
     return (
         <>
-            <div className='list'>
-                {listDeatil}
-            </div>
+            <ul className='list'>
+                {listDetail}
+            </ul>
         </>
     );
 }

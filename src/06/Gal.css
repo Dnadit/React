@@ -8,23 +8,29 @@
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    width: 40vw; 
-    margin: 3%;    
+    width: 36vw;
+    margin: 0px; 
+    padding: 2vw ;    
+    
 }
 .detail {
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: left;
-    width: 40vw; 
-    margin: 3%;    
+    width: 56vw; 
+    padding: 2vw; 
+    
+
 }
 .listDetail, .cliked {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid grey;
-    width: 80%;
+    border: 1px solid lightblue;
+    color: grey;
+    font-weight: bold;
+    width: 300px;
     height: 5vh;
     margin-top: 20px;
 }
@@ -32,7 +38,7 @@
     background-color: lightgrey;
     color: red;
 } 
-.img {
+.detail img {
     width: 100%;
     height: 50vh;
 }
