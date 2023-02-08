@@ -1,0 +1,29 @@
+input[type=text],
+input[type=password],
+select {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: #b4dbb5;            
+    border: none;
+    color: rgb(88, 88, 8);
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+}
+
+.button:hover, .button:active {
+    background-color: rgb(88, 88, 8);
+    color: #b4dbb5;
+}
+
+#msg span {
+    color: blue;
+}

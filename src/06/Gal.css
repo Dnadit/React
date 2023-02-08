@@ -11,7 +11,29 @@
     width: 36vw;
     margin: 0px; 
     padding: 2vw ;    
-    
+}
+.list > div {
+    background-color: rgb(116, 197, 224);
+    width: 300px;
+    height: 5vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type=text] {
+    height: 30px;
+}
+button {
+    background-color: #b4dbb5;            
+    border: none;
+    color: rgb(88, 88, 8);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 5px;
 }
 .detail {
     display: flex;
@@ -19,8 +41,7 @@
     justify-content: top;
     align-items: left;
     width: 56vw; 
-    padding: 2vw; 
-    
+    padding: 2vw;    
 
 }
 .listDetail, .cliked {
