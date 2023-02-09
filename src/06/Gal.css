@@ -21,6 +21,10 @@
     justify-content: center;
     align-items: center;
 }
+.list ul {
+    margin: 0px;
+    padding: 0px;
+}
 input[type=text] {
     height: 30px;
 }
