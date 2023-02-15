@@ -15,11 +15,11 @@ const W2 = () => {
     }
 
     return (
-        <>
+        <div className="content">
         <Wheader title={'일기예보-중기'} />
         {w2header}
 
-        </>
+        </div>
     ) ;
 }
 

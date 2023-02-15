@@ -4,7 +4,7 @@ const Wheader = ({title}) => {
     return (
         <div className="header">
             <h1>{title}</h1>
-            <div><Link to="/">😀</Link></div>
+            <div className="icon"><Link to="/">🔙</Link></div>
         </div>
     ) ;
 }

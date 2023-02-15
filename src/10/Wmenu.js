@@ -15,13 +15,13 @@ const Wmenu = () => {
     }
 
     return (
-        <>
-        <Wheader title={'일기예보'} />
-        <ul>
-            <button onClick={() => goUrl1('단기예보')}>단기예보</button>
-            <button onClick={() => goUrl2('중기예보')}>중기예보</button>
-        </ul>
-        </>
+        <div className="content">
+            <Wheader title={'일기예보'} />
+            <ul>
+                <button onClick={() => goUrl1('단기예보')}>단기예보</button>
+                <button onClick={() => goUrl2('중기예보')}>중기예보</button>
+            </ul>
+        </div>
     ) ;
 }
 

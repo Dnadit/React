@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.mvheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(196, 241, 243);
+    color: black;
+}
+.mvheader form, .mvheader h1 {    
+    display: flex;
+    justify-content: center;
+}
+.mvheader h1 {
+    width: 70%;
+}
+.mvheader form {
+    width: 30%;
+}
+input[type=date] {
+    border: none;
+    border-bottom: 2px solid red;
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
