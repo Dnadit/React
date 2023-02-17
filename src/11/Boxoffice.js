@@ -23,10 +23,7 @@ const Boxoffice = () => {
                 </form>
             </div>
             <div className="mvmain">
-                <BoxofficeList tDt={targetDt} />
-            </div>
-            <div className="mvdetail">
-                상세내용 나오기
+                {targetDt && <BoxofficeList tDt={targetDt} />} 
             </div>
         </>
     );

@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100px;
+    height: 10vh;
     background-color: rgb(196, 241, 243);
     color: black;
 }
@@ -22,10 +22,62 @@
     width: 30%;
 }
 input[type=date] {
-    border: none;
-    border-bottom: 2px solid red;
-
-    width: 100%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
+}
+.mvmain {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 100vw;
+    height: 90vh;
+}
+.mvlist {
+    width: 40vw;
+    height: 5vh;
+    margin-top: 2vh;
+    border-bottom: 1px solid gainsboro;
+}
+.mvlist span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;    
+}
+.rank {   
+    width: 10%;
+}
+.mvname{
+    width: 60%;
+}
+.salesshare {
+    width: 10%;
+}
+.audiacc {
+    width: 20%;
+}
+.mvdetail {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 60vw;
+    height: 90vh;
+    margin-top: 2vh;   
+}
+.detailbox {
+    border: 1px solid gainsboro;
+    background-color: rgb(57, 144, 179);
+    color: aliceblue;
+}
+.mvdetail span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: 5vh;
+    border-bottom: 1px solid gainsboro; 
+}
+#detailtitle, .detailtitle {
+    font-weight: bold;
 }
